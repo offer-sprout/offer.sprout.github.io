@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VogueSphere | Premium Fashion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="logo">
+                    <h1>VogueSphere</h1>
+                </div>
+                
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                        <li><a href="#" class="nav-link" data-page="categories">Categories</a></li>
+                        <li><a href="#" class="nav-link" data-page="men">Men</a></li>
+                        <li><a href="#" class="nav-link" data-page="women">Women</a></li>
+                        <li><a href="#" class="nav-link" data-page="accessories">Accessories</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="nav-icons">
+                    <button class="icon-btn search-toggle" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="icon-btn cart-btn" aria-label="Cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Search Overlay -->
+        <div class="search-overlay">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search for products, brands, and more...">
+                <button class="search-close" aria-label="Close search">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button class="search-submit" aria-label="Submit search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Homepage - Categories -->
+        <section class="page active" id="home">
+            <div class="container">
+                <div class="hero-section">
+                    <h2 class="hero-title">Elevate Your Style</h2>
+                    <p class="hero-subtitle">Discover premium fashion curated for the modern individual</p>
+                    <a href="#categories" class="hero-cta">Shop Now</a>
+                </div>
+                
+                <h2 class="section-title">Shop by Category</h2>
+                <div class="categories-grid">
+                    <div class="category-card" data-category="clothing">
+                        <div class="category-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h3 class="category-title">Clothing</h3>
+                        <p class="category-desc">Premium apparel for every occasion</p>
+                    </div>
+                    
+                    <div class="category-card" data-category="watches">
+                        <div class="category-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="category-title">Watches</h3>
+                        <p class="category-desc">Timeless pieces for the modern individual</p>
+                    </div>
+                    
+                    <div class="category-card" data-category="shoes">
+                        <div class="category-icon">
+                            <i class="fas fa-shoe-prints"></i>
+                        </div>
+                        <h3 class="category-title">Shoes</h3>
+                        <p class="category-desc">Step out in style with our footwear collection</p>
+                    </div>
+                    
+                    <div class="category-card" data-category="accessories">
+                        <div class="category-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3 class="category-title">Accessories</h3>
+                        <p class="category-desc">Complete your look with premium accents</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Gender Selection (hidden by default) -->
+        <section class="page" id="gender-selection">
+            <div class="container">
+                <button class="back-btn" id="back-to-categories">
+                    <i class="fas fa-arrow-left"></i> Back to Categories
+                </button>
+                
+                <h2 class="section-title" id="gender-title">Select Gender</h2>
+                <div class="gender-grid">
+                    <div class="gender-card" data-gender="men">
+                        <div class="gender-image" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="gender-overlay">
+                            <h3 class="gender-name">Men</h3>
+                            <p class="gender-desc">Premium fashion for men</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gender-card" data-gender="women">
+                        <div class="gender-image" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w-800&q=80');"></div>
+                        <div class="gender-overlay">
+                            <h3 class="gender-name">Women</h3>
+                            <p class="gender-desc">Elegant fashion for women</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Product Listing (hidden by default) -->
+        <section class="page" id="product-listing">
+            <div class="container">
+                <button class="back-btn" id="back-to-gender">
+                    <i class="fas fa-arrow-left"></i> Back to Gender Selection
+                </button>
+                
+                <div class="listing-header">
+                    <h2 class="section-title" id="listing-title">Products</h2>
+                    
+                    <div class="listing-controls">
+                        <div class="filter-dropdown">
+                            <select id="category-filter">
+                                <option value="all">All Categories</option>
+                                <option value="shirt">Shirt</option>
+                                <option value="pant">Pant</option>
+                                <option value="jeans">Jeans</option>
+                                <option value="tshirt">T-Shirt</option>
+                                <option value="kurti">Kurti</option>
+                                <option value="dress">Dress</option>
+                                <option value="watch">Watch</option>
+                                <option value="shoes">Shoes</option>
+                                <option value="accessories">Accessories</option>
+                            </select>
+                        </div>
+                        
+                        <div class="sort-dropdown">
+                            <select id="sort-by">
+                                <option value="featured">Featured</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="name">Name: A to Z</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-grid" id="product-grid">
+                    <!-- Products will be loaded here via JavaScript -->
+                </div>
+                
+                <div class="no-products" id="no-products">
+                    <i class="fas fa-search"></i>
+                    <h3>No products found</h3>
+                    <p>Try adjusting your search or filter to find what you're looking for.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Cart Sidebar -->
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="cart-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be loaded here -->
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-amount">₹0</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+        <div class="cart-overlay"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>VogueSphere</h3>
+                    <p>Premium fashion for the modern individual. Curated collections that blend style with sophistication.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Shop</h4>
+                        <ul>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">New Arrivals</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Pinterest</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 VogueSphere. All rights reserved. | This is a frontend-only demo project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
