@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VogueSphere | Premium Fashion</title>
+    <title>Offer.Sprout | Premium Fashion Marketplace</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">Offer.Sprout</div>
+        </div>
+    </div>
+
     <!-- Header / Navigation -->
     <header class="header">
         <div class="container">
@@ -20,16 +28,16 @@
                 </button>
                 
                 <div class="logo">
-                    <h1>VogueSphere</h1>
+                    <h1>Offer.<span class="logo-accent">Sprout</span></h1>
                 </div>
                 
                 <nav class="nav-menu">
                     <ul>
                         <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
-                        <li><a href="#" class="nav-link" data-page="categories">Categories</a></li>
-                        <li><a href="#" class="nav-link" data-page="men">Men</a></li>
-                        <li><a href="#" class="nav-link" data-page="women">Women</a></li>
-                        <li><a href="#" class="nav-link" data-page="accessories">Accessories</a></li>
+                        <li><a href="#" class="nav-link" data-page="categories">Collections</a></li>
+                        <li><a href="#" class="nav-link" data-page="new-arrivals">New Arrivals</a></li>
+                        <li><a href="#" class="nav-link" data-page="trending">Trending</a></li>
+                        <li><a href="#" class="nav-link" data-page="premium">Premium</a></li>
                     </ul>
                 </nav>
                 
@@ -37,9 +45,16 @@
                     <button class="icon-btn search-toggle" aria-label="Search">
                         <i class="fas fa-search"></i>
                     </button>
+                    <button class="icon-btn wishlist-btn" aria-label="Wishlist">
+                        <i class="fas fa-heart"></i>
+                        <span class="wishlist-count">3</span>
+                    </button>
                     <button class="icon-btn cart-btn" aria-label="Cart">
                         <i class="fas fa-shopping-bag"></i>
                         <span class="cart-count">0</span>
+                    </button>
+                    <button class="icon-btn user-btn" aria-label="Account">
+                        <i class="fas fa-user"></i>
                     </button>
                 </div>
             </div>
@@ -48,7 +63,12 @@
         <!-- Search Overlay -->
         <div class="search-overlay">
             <div class="search-container">
-                <input type="text" class="search-input" placeholder="Search for products, brands, and more...">
+                <input type="text" class="search-input" placeholder="Search for premium products, brands, and collections...">
+                <div class="search-suggestions">
+                    <span class="suggestion-tag">Trending: Luxury Watches</span>
+                    <span class="suggestion-tag">New: Summer Collection</span>
+                    <span class="suggestion-tag">Premium: Leather Goods</span>
+                </div>
                 <button class="search-close" aria-label="Close search">
                     <i class="fas fa-times"></i>
                 </button>
@@ -61,203 +81,300 @@
 
     <!-- Main Content Area -->
     <main class="main-content">
-        <!-- Homepage - Categories -->
+        <!-- Homepage - Hero & Categories -->
         <section class="page active" id="home">
             <div class="container">
+                <!-- Hero Section -->
                 <div class="hero-section">
-                    <h2 class="hero-title">Elevate Your Style</h2>
-                    <p class="hero-subtitle">Discover premium fashion curated for the modern individual</p>
-                    <a href="#categories" class="hero-cta">Shop Now</a>
+                    <div class="hero-content">
+                        <div class="hero-tag">Premium Collection</div>
+                        <h2 class="hero-title">Elevate Your <span class="text-gradient">Style</span> Universe</h2>
+                        <p class="hero-subtitle">Discover curated luxury fashion from emerging designers and premium brands worldwide</p>
+                        <a href="#categories" class="hero-cta pulse-animation">
+                            <span>Explore Collections</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">200+</div>
+                            <div class="stat-label">Premium Brands</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5K+</div>
+                            <div class="stat-label">Curated Products</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Style Support</div>
+                        </div>
+                    </div>
                 </div>
                 
-                <h2 class="section-title">Shop by Category</h2>
+                <!-- Featured Categories -->
+                <h2 class="section-title">Curated <span class="text-gradient">Categories</span></h2>
                 <div class="categories-grid">
                     <div class="category-card" data-category="clothing">
                         <div class="category-icon">
                             <i class="fas fa-tshirt"></i>
                         </div>
-                        <h3 class="category-title">Clothing</h3>
-                        <p class="category-desc">Premium apparel for every occasion</p>
+                        <div class="category-content">
+                            <h3 class="category-title">Apparel</h3>
+                            <p class="category-desc">Premium clothing collections</p>
+                            <div class="category-count">240+ items</div>
+                        </div>
+                        <div class="category-hover">
+                            <span>Explore Now</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
                     </div>
                     
                     <div class="category-card" data-category="watches">
                         <div class="category-icon">
                             <i class="fas fa-clock"></i>
                         </div>
-                        <h3 class="category-title">Watches</h3>
-                        <p class="category-desc">Timeless pieces for the modern individual</p>
+                        <div class="category-content">
+                            <h3 class="category-title">Timepieces</h3>
+                            <p class="category-desc">Luxury watches & smart wearables</p>
+                            <div class="category-count">120+ items</div>
+                        </div>
+                        <div class="category-hover">
+                            <span>Explore Now</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
                     </div>
                     
-                    <div class="category-card" data-category="shoes">
+                    <div class="category-card" data-category="footwear">
                         <div class="category-icon">
                             <i class="fas fa-shoe-prints"></i>
                         </div>
-                        <h3 class="category-title">Shoes</h3>
-                        <p class="category-desc">Step out in style with our footwear collection</p>
+                        <div class="category-content">
+                            <h3 class="category-title">Footwear</h3>
+                            <p class="category-desc">Designer shoes & sneakers</p>
+                            <div class="category-count">180+ items</div>
+                        </div>
+                        <div class="category-hover">
+                            <span>Explore Now</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
                     </div>
                     
                     <div class="category-card" data-category="accessories">
                         <div class="category-icon">
                             <i class="fas fa-gem"></i>
                         </div>
-                        <h3 class="category-title">Accessories</h3>
-                        <p class="category-desc">Complete your look with premium accents</p>
+                        <div class="category-content">
+                            <h3 class="category-title">Accessories</h3>
+                            <p class="category-desc">Luxury accents & jewelry</p>
+                            <div class="category-count">95+ items</div>
+                        </div>
+                        <div class="category-hover">
+                            <span>Explore Now</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="bags">
+                        <div class="category-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3 class="category-title">Bags</h3>
+                            <p class="category-desc">Designer handbags & luggage</p>
+                            <div class="category-count">75+ items</div>
+                        </div>
+                        <div class="category-hover">
+                            <span>Explore Now</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="perfumes">
+                        <div class="category-icon">
+                            <i class="fas fa-spray-can"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3 class="category-title">Fragrances</h3>
+                            <p class="category-desc">Luxury perfumes & colognes</p>
+                            <div class="category-count">60+ items</div>
+                        </div>
+                        <div class="category-hover">
+                            <span>Explore Now</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="eyewear">
+                        <div class="category-icon">
+                            <i class="fas fa-glasses"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3 class="category-title">Eyewear</h3>
+                            <p class="category-desc">Designer sunglasses & glasses</p>
+                            <div class="category-count">45+ items</div>
+                        </div>
+                        <div class="category-hover">
+                            <span>Explore Now</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="electronics">
+                        <div class="category-icon">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3 class="category-title">Tech & Audio</h3>
+                            <p class="category-desc">Premium gadgets & headphones</p>
+                            <div class="category-count">85+ items</div>
+                        </div>
+                        <div class="category-hover">
+                            <span>Explore Now</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Featured Brands -->
+                <div class="brands-section">
+                    <h3 class="brands-title">Featured Premium Brands</h3>
+                    <div class="brands-grid">
+                        <div class="brand-logo">LUXE</div>
+                        <div class="brand-logo">AETHER</div>
+                        <div class="brand-logo">VELVET</div>
+                        <div class="brand-logo">NOIR</div>
+                        <div class="brand-logo">MONARCH</div>
+                        <div class="brand-logo">SILHOUETTE</div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Gender Selection (hidden by default) -->
+        <!-- Gender Selection -->
         <section class="page" id="gender-selection">
             <div class="container">
                 <button class="back-btn" id="back-to-categories">
-                    <i class="fas fa-arrow-left"></i> Back to Categories
+                    <i class="fas fa-arrow-left"></i> Back to Collections
                 </button>
                 
-                <h2 class="section-title" id="gender-title">Select Gender</h2>
+                <h2 class="section-title" id="gender-title">Select <span class="text-gradient">Collection</span></h2>
                 <div class="gender-grid">
                     <div class="gender-card" data-gender="men">
-                        <div class="gender-image" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="gender-image" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');"></div>
                         <div class="gender-overlay">
-                            <h3 class="gender-name">Men</h3>
-                            <p class="gender-desc">Premium fashion for men</p>
+                            <div class="gender-content">
+                                <h3 class="gender-name">Men's Collection</h3>
+                                <p class="gender-desc">Premium fashion for the modern gentleman</p>
+                                <div class="gender-stats">
+                                    <span><i class="fas fa-tshirt"></i> 150+ Products</span>
+                                    <span><i class="fas fa-star"></i> Premium Brands</span>
+                                </div>
+                            </div>
                         </div>
+                        <div class="gender-badge">Men</div>
                     </div>
                     
                     <div class="gender-card" data-gender="women">
-                        <div class="gender-image" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w-800&q=80');"></div>
+                        <div class="gender-image" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');"></div>
                         <div class="gender-overlay">
-                            <h3 class="gender-name">Women</h3>
-                            <p class="gender-desc">Elegant fashion for women</p>
+                            <div class="gender-content">
+                                <h3 class="gender-name">Women's Collection</h3>
+                                <p class="gender-desc">Elegant fashion for the contemporary woman</p>
+                                <div class="gender-stats">
+                                    <span><i class="fas fa-tshirt"></i> 200+ Products</span>
+                                    <span><i class="fas fa-star"></i> Luxury Brands</span>
+                                </div>
+                            </div>
                         </div>
+                        <div class="gender-badge">Women</div>
+                    </div>
+                    
+                    <div class="gender-card" data-gender="unisex">
+                        <div class="gender-image" style="background-image: url('https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');"></div>
+                        <div class="gender-overlay">
+                            <div class="gender-content">
+                                <h3 class="gender-name">Unisex Collection</h3>
+                                <p class="gender-desc">Gender-neutral premium fashion</p>
+                                <div class="gender-stats">
+                                    <span><i class="fas fa-tshirt"></i> 100+ Products</span>
+                                    <span><i class="fas fa-star"></i> Contemporary Brands</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gender-badge">Unisex</div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Product Listing (hidden by default) -->
+        <!-- Product Listing -->
         <section class="page" id="product-listing">
             <div class="container">
                 <button class="back-btn" id="back-to-gender">
-                    <i class="fas fa-arrow-left"></i> Back to Gender Selection
+                    <i class="fas fa-arrow-left"></i> Back to Collection
                 </button>
                 
                 <div class="listing-header">
-                    <h2 class="section-title" id="listing-title">Products</h2>
+                    <div class="listing-title-section">
+                        <h2 class="section-title" id="listing-title">Premium Collection</h2>
+                        <div class="listing-subtitle" id="listing-subtitle">Curated selection of premium products</div>
+                    </div>
                     
                     <div class="listing-controls">
-                        <div class="filter-dropdown">
+                        <div class="control-group">
+                            <label for="category-filter"><i class="fas fa-filter"></i> Filter</label>
                             <select id="category-filter">
                                 <option value="all">All Categories</option>
-                                <option value="shirt">Shirt</option>
-                                <option value="pant">Pant</option>
+                                <option value="shirt">Shirts</option>
+                                <option value="pant">Pants</option>
                                 <option value="jeans">Jeans</option>
-                                <option value="tshirt">T-Shirt</option>
-                                <option value="kurti">Kurti</option>
-                                <option value="dress">Dress</option>
-                                <option value="watch">Watch</option>
-                                <option value="shoes">Shoes</option>
+                                <option value="tshirt">T-Shirts</option>
+                                <option value="kurti">Kurtis</option>
+                                <option value="dress">Dresses</option>
+                                <option value="jacket">Jackets</option>
+                                <option value="sweater">Sweaters</option>
+                                <option value="watch">Watches</option>
+                                <option value="shoes">Footwear</option>
                                 <option value="accessories">Accessories</option>
+                                <option value="bags">Bags</option>
+                                <option value="perfumes">Fragrances</option>
+                                <option value="eyewear">Eyewear</option>
+                                <option value="electronics">Tech & Audio</option>
                             </select>
                         </div>
                         
-                        <div class="sort-dropdown">
+                        <div class="control-group">
+                            <label for="sort-by"><i class="fas fa-sort"></i> Sort</label>
                             <select id="sort-by">
                                 <option value="featured">Featured</option>
                                 <option value="price-low">Price: Low to High</option>
                                 <option value="price-high">Price: High to Low</option>
                                 <option value="name">Name: A to Z</option>
+                                <option value="newest">Newest First</option>
+                                <option value="rating">Top Rated</option>
                             </select>
+                        </div>
+                        
+                        <div class="view-toggle">
+                            <button class="view-btn active" data-view="grid">
+                                <i class="fas fa-th"></i>
+                            </button>
+                            <button class="view-btn" data-view="list">
+                                <i class="fas fa-list"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
                 
-                <div class="product-grid" id="product-grid">
-                    <!-- Products will be loaded here via JavaScript -->
+                <div class="products-container">
+                    <div class="product-grid" id="product-grid">
+                        <!-- Products loaded via JavaScript -->
+                    </div>
+                    
+                    <div class="product-list" id="product-list">
+                        <!-- List view loaded via JavaScript -->
+                    </div>
                 </div>
                 
                 <div class="no-products" id="no-products">
-                    <i class="fas fa-search"></i>
-                    <h3>No products found</h3>
-                    <p>Try adjusting your search or filter to find what you're looking for.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Cart Sidebar -->
-        <div class="cart-sidebar">
-            <div class="cart-header">
-                <h3>Your Cart</h3>
-                <button class="cart-close">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="cart-items">
-                <!-- Cart items will be loaded here -->
-                <div class="empty-cart">
-                    <i class="fas fa-shopping-bag"></i>
-                    <p>Your cart is empty</p>
-                </div>
-            </div>
-            <div class="cart-footer">
-                <div class="cart-total">
-                    <span>Total:</span>
-                    <span class="total-amount">₹0</span>
-                </div>
-                <button class="checkout-btn">Proceed to Checkout</button>
-            </div>
-        </div>
-        <div class="cart-overlay"></div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>VogueSphere</h3>
-                    <p>Premium fashion for the modern individual. Curated collections that blend style with sophistication.</p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Shop</h4>
-                        <ul>
-                            <li><a href="#">Men</a></li>
-                            <li><a href="#">Women</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">New Arrivals</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4>Help</h4>
-                        <ul>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Shipping</a></li>
-                            <li><a href="#">Returns</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4>Connect</h4>
-                        <ul>
-                            <li><a href="#">Instagram</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Pinterest</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2023 VogueSphere. All rights reserved. | This is a frontend-only demo project.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+                    <div class="no-products-
