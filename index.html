@@ -11,14 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen">
-        <div class="loader">
-            <div class="loader-circle"></div>
-            <div class="loader-text">Offer.Sprout</div>
-        </div>
-    </div>
-
     <!-- Header / Navigation -->
     <header class="header">
         <div class="container">
@@ -116,24 +108,9 @@
                             <i class="fas fa-tshirt"></i>
                         </div>
                         <div class="category-content">
-                            <h3 class="category-title">Apparel</h3>
-                            <p class="category-desc">Premium clothing collections</p>
+                            <h3 class="category-title">Clothing</h3>
+                            <p class="category-desc">Premium apparel collections</p>
                             <div class="category-count">240+ items</div>
-                        </div>
-                        <div class="category-hover">
-                            <span>Explore Now</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="category-card" data-category="watches">
-                        <div class="category-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="category-content">
-                            <h3 class="category-title">Timepieces</h3>
-                            <p class="category-desc">Luxury watches & smart wearables</p>
-                            <div class="category-count">120+ items</div>
                         </div>
                         <div class="category-hover">
                             <span>Explore Now</span>
@@ -156,6 +133,21 @@
                         </div>
                     </div>
                     
+                    <div class="category-card" data-category="watches">
+                        <div class="category-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3 class="category-title">Watches</h3>
+                            <p class="category-desc">Luxury timepieces</p>
+                            <div class="category-count">120+ items</div>
+                        </div>
+                        <div class="category-hover">
+                            <span>Explore Now</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
                     <div class="category-card" data-category="accessories">
                         <div class="category-icon">
                             <i class="fas fa-gem"></i>
@@ -164,6 +156,21 @@
                             <h3 class="category-title">Accessories</h3>
                             <p class="category-desc">Luxury accents & jewelry</p>
                             <div class="category-count">95+ items</div>
+                        </div>
+                        <div class="category-hover">
+                            <span>Explore Now</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="gadgets">
+                        <div class="category-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3 class="category-title">Gadgets</h3>
+                            <p class="category-desc">Premium tech & electronics</p>
+                            <div class="category-count">85+ items</div>
                         </div>
                         <div class="category-hover">
                             <span>Explore Now</span>
@@ -225,6 +232,21 @@
                         </div>
                         <div class="gender-badge">Women</div>
                     </div>
+                    
+                    <div class="gender-card" data-gender="unisex">
+                        <div class="gender-image" style="background-image: url('https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80')"></div>
+                        <div class="gender-overlay">
+                            <div class="gender-content">
+                                <h3 class="gender-name">Unisex Collection</h3>
+                                <p class="gender-desc">Gender-neutral premium fashion</p>
+                                <div class="gender-stats">
+                                    <span><i class="fas fa-tshirt"></i> 100+ Products</span>
+                                    <span><i class="fas fa-star"></i> Contemporary Brands</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gender-badge">Unisex</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -248,14 +270,13 @@
                             <select id="category-filter">
                                 <option value="all">All Categories</option>
                                 <option value="shirt">Shirts</option>
-                                <option value="pant">Pants</option>
                                 <option value="jeans">Jeans</option>
                                 <option value="tshirt">T-Shirts</option>
-                                <option value="kurti">Kurtis</option>
                                 <option value="dress">Dresses</option>
-                                <option value="watch">Watches</option>
                                 <option value="shoes">Footwear</option>
+                                <option value="watch">Watches</option>
                                 <option value="accessories">Accessories</option>
+                                <option value="gadgets">Gadgets</option>
                             </select>
                         </div>
                         
@@ -358,45 +379,11 @@
                         <ul>
                             <li><a href="#" class="nav-link" data-page="gender-selection" data-gender="men">Men's Collection</a></li>
                             <li><a href="#" class="nav-link" data-page="gender-selection" data-gender="women">Women's Collection</a></li>
-                            <li><a href="#" class="nav-link" data-page="home">All Categories</a></li>
+                            <li><a href="#" class="nav-link" data-page="gender-selection" data-gender="unisex">Unisex Collection</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-column">
                         <h4>Help</h4>
                         <ul>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Shipping Policy</a></li>
-                            <li><a href="#">Returns & Exchanges</a></li>
-                            <li><a href="#">Contact Support</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4>Newsletter</h4>
-                        <p class="newsletter-text">Subscribe for exclusive offers and style inspiration</p>
-                        <div class="newsletter-form">
-                            <input type="email" placeholder="Your email address">
-                            <button type="submit">
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <div class="payment-methods">
-                    <i class="fab fa-cc-visa"></i>
-                    <i class="fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-amex"></i>
-                    <i class="fab fa-cc-paypal"></i>
-                </div>
-                <p class="copyright">&copy; 2023 Offer.Sprout. All rights reserved. | Premium fashion marketplace demo</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+                            <li><a href="#">FAQ</a></l

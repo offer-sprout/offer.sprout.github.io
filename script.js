@@ -1,6 +1,6 @@
-// Dummy Product Data (Simplified but functional)
+// Dummy Product Data with 5 Categories (Clothing, Shoes, Watches, Accessories, Gadgets)
 const products = [
-    // Men's Clothing
+    // Clothing (5 products)
     {
         id: 1,
         name: "Premium Slim Fit Cotton Shirt",
@@ -17,48 +17,20 @@ const products = [
     },
     {
         id: 2,
-        name: "Luxury Cashmere Sweater",
-        category: "sweater",
-        gender: "men",
-        price: 8999,
-        originalPrice: 11999,
+        name: "Designer Silk Evening Gown",
+        category: "dress",
+        gender: "women",
+        price: 18999,
+        originalPrice: 24999,
         rating: 4.9,
         ratingCount: 189,
-        image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        description: "100% Mongolian cashmere luxury knit sweater.",
-        tags: ["luxury", "cashmere", "winter"],
-        badge: "Premium"
-    },
-    {
-        id: 3,
-        name: "Designer Leather Jacket",
-        category: "jacket",
-        gender: "men",
-        price: 15999,
-        originalPrice: 19999,
-        rating: 4.8,
-        ratingCount: 267,
-        image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        description: "Italian lambskin leather jacket with quilted lining.",
-        tags: ["designer", "leather", "jacket"],
+        image: "https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        description: "Hand-beaded silk evening gown with chiffon overlay.",
+        tags: ["silk", "evening", "gown"],
         badge: "Luxury"
     },
     {
-        id: 4,
-        name: "Tailored Wool Trousers",
-        category: "pant",
-        gender: "men",
-        price: 5499,
-        originalPrice: 6999,
-        rating: 4.6,
-        ratingCount: 156,
-        image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        description: "Tailored wool trousers with satin lining.",
-        tags: ["wool", "tailored", "formal"],
-        badge: null
-    },
-    {
-        id: 5,
+        id: 3,
         name: "Premium Denim Jeans",
         category: "jeans",
         gender: "men",
@@ -72,67 +44,23 @@ const products = [
         badge: "Popular"
     },
     {
-        id: 6,
-        name: "Silk Blend Polo Shirt",
+        id: 4,
+        name: "Cashmere Turtleneck Sweater",
         category: "tshirt",
-        gender: "men",
-        price: 3299,
-        originalPrice: 4299,
-        rating: 4.4,
-        ratingCount: 278,
-        image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        description: "Silk-cotton blend polo with pearl snap buttons.",
-        tags: ["silk", "polo", "casual"],
-        badge: null
-    },
-    
-    // Women's Clothing
-    {
-        id: 101,
-        name: "Silk Evening Gown",
-        category: "dress",
-        gender: "women",
-        price: 18999,
-        originalPrice: 24999,
-        rating: 4.9,
-        ratingCount: 189,
-        image: "https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        description: "Hand-beaded silk evening gown with chiffon overlay.",
-        tags: ["silk", "evening", "gown"],
-        badge: "Luxury"
-    },
-    {
-        id: 102,
-        name: "Cashmere Turtleneck",
-        category: "sweater",
         gender: "women",
         price: 7999,
         originalPrice: 9999,
         rating: 4.8,
         ratingCount: 234,
         image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        description: "Fine cashmere turtleneck sweater.",
+        description: "Fine cashmere turtleneck sweater for winter.",
         tags: ["cashmere", "turtleneck", "winter"],
         badge: "Premium"
     },
     {
-        id: 103,
-        name: "Designer Leather Skirt",
-        category: "skirt",
-        gender: "women",
-        price: 12999,
-        originalPrice: 16999,
-        rating: 4.7,
-        ratingCount: 156,
-        image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        description: "Italian leather pencil skirt with silk lining.",
-        tags: ["leather", "designer", "skirt"],
-        badge: "Luxury"
-    },
-    {
-        id: 104,
+        id: 5,
         name: "Embroidered Silk Kurti",
-        category: "kurti",
+        category: "dress",
         gender: "women",
         price: 5999,
         originalPrice: 7999,
@@ -143,36 +71,80 @@ const products = [
         tags: ["silk", "embroidered", "ethnic"],
         badge: "Popular"
     },
+    
+    // Shoes (5 products)
+    {
+        id: 101,
+        name: "Limited Edition Sneakers",
+        category: "shoes",
+        gender: "unisex",
+        price: 19999,
+        originalPrice: 24999,
+        rating: 4.8,
+        ratingCount: 567,
+        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        description: "Limited edition designer sneakers with premium leather.",
+        tags: ["sneakers", "limited", "designer"],
+        badge: "Limited"
+    },
+    {
+        id: 102,
+        name: "Italian Leather Loafers",
+        category: "shoes",
+        gender: "men",
+        price: 14999,
+        originalPrice: 18999,
+        rating: 4.7,
+        ratingCount: 234,
+        image: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        description: "Handcrafted Italian leather loafers.",
+        tags: ["leather", "loafers", "italian"],
+        badge: "Premium"
+    },
+    {
+        id: 103,
+        name: "Designer High Heels",
+        category: "shoes",
+        gender: "women",
+        price: 17999,
+        originalPrice: 22999,
+        rating: 4.6,
+        ratingCount: 189,
+        image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        description: "Designer crystal-embellished high heels.",
+        tags: ["heels", "designer", "evening"],
+        badge: "Luxury"
+    },
+    {
+        id: 104,
+        name: "Running Sports Shoes",
+        category: "shoes",
+        gender: "men",
+        price: 8999,
+        originalPrice: 11999,
+        rating: 4.5,
+        ratingCount: 456,
+        image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        description: "Premium running shoes with advanced cushioning.",
+        tags: ["sports", "running", "performance"],
+        badge: "Sports"
+    },
     {
         id: 105,
-        name: "Linen Wide-Leg Trousers",
-        category: "pant",
-        gender: "women",
-        price: 4499,
-        originalPrice: 5999,
-        rating: 4.5,
-        ratingCount: 189,
-        image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        description: "Italian linen wide-leg trousers.",
-        tags: ["linen", "wide-leg", "summer"],
+        name: "Casual Canvas Sneakers",
+        category: "shoes",
+        gender: "unisex",
+        price: 4999,
+        originalPrice: 6999,
+        rating: 4.4,
+        ratingCount: 321,
+        image: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        description: "Casual canvas sneakers for everyday wear.",
+        tags: ["casual", "canvas", "sneakers"],
         badge: null
     },
-    {
-        id: 106,
-        name: "Evening Cocktail Dress",
-        category: "dress",
-        gender: "women",
-        price: 14999,
-        originalPrice: 19999,
-        rating: 4.8,
-        ratingCount: 267,
-        image: "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        description: "Sequin embroidered cocktail dress.",
-        tags: ["cocktail", "evening", "sequin"],
-        badge: "New"
-    },
     
-    // Watches
+    // Watches (5 products)
     {
         id: 201,
         name: "Automatic Chronograph Watch",
@@ -201,40 +173,52 @@ const products = [
         tags: ["smart", "fitness", "tech"],
         badge: "Tech"
     },
-    
-    // Footwear
     {
-        id: 301,
-        name: "Limited Edition Sneakers",
-        category: "shoes",
-        gender: "unisex",
-        price: 19999,
-        originalPrice: 24999,
-        rating: 4.8,
-        ratingCount: 567,
-        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        description: "Limited edition designer sneakers.",
-        tags: ["sneakers", "limited", "designer"],
-        badge: "Limited"
-    },
-    {
-        id: 302,
-        name: "Italian Leather Loafers",
-        category: "shoes",
-        gender: "men",
-        price: 14999,
-        originalPrice: 18999,
-        rating: 4.7,
-        ratingCount: 234,
-        image: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        description: "Handcrafted Italian leather loafers.",
-        tags: ["leather", "loafers", "italian"],
+        id: 203,
+        name: "Diamond Bezel Watch",
+        category: "watch",
+        gender: "women",
+        price: 89999,
+        originalPrice: 119999,
+        rating: 4.9,
+        ratingCount: 78,
+        image: "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        description: "18k gold watch with diamond bezel.",
+        tags: ["diamond", "gold", "luxury"],
         badge: "Premium"
     },
-    
-    // Accessories
     {
-        id: 401,
+        id: 204,
+        name: "Minimalist Leather Watch",
+        category: "watch",
+        gender: "unisex",
+        price: 12999,
+        originalPrice: 16999,
+        rating: 4.6,
+        ratingCount: 234,
+        image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        description: "Minimalist design with genuine leather strap.",
+        tags: ["minimalist", "leather", "classic"],
+        badge: null
+    },
+    {
+        id: 205,
+        name: "Sports Digital Watch",
+        category: "watch",
+        gender: "men",
+        price: 8999,
+        originalPrice: 11999,
+        rating: 4.5,
+        ratingCount: 189,
+        image: "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        description: "Digital sports watch with multiple functions.",
+        tags: ["sports", "digital", "waterproof"],
+        badge: "Sports"
+    },
+    
+    // Accessories (5 products)
+    {
+        id: 301,
         name: "Leather Briefcase",
         category: "accessories",
         gender: "men",
@@ -248,7 +232,7 @@ const products = [
         badge: "Premium"
     },
     {
-        id: 402,
+        id: 302,
         name: "Designer Handbag",
         category: "accessories",
         gender: "women",
@@ -262,7 +246,7 @@ const products = [
         badge: "Iconic"
     },
     {
-        id: 403,
+        id: 303,
         name: "Aviator Sunglasses",
         category: "accessories",
         gender: "unisex",
@@ -274,6 +258,106 @@ const products = [
         description: "Polarized aviator sunglasses with UV protection.",
         tags: ["sunglasses", "aviator", "polarized"],
         badge: "Popular"
+    },
+    {
+        id: 304,
+        name: "Silver Necklace Set",
+        category: "accessories",
+        gender: "women",
+        price: 8999,
+        originalPrice: 11999,
+        rating: 4.6,
+        ratingCount: 189,
+        image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        description: "Sterling silver necklace with matching earrings.",
+        tags: ["silver", "jewelry", "necklace"],
+        badge: "Elegant"
+    },
+    {
+        id: 305,
+        name: "Premium Leather Belt",
+        category: "accessories",
+        gender: "men",
+        price: 4999,
+        originalPrice: 6999,
+        rating: 4.5,
+        ratingCount: 156,
+        image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        description: "Genuine leather belt with stainless steel buckle.",
+        tags: ["leather", "belt", "premium"],
+        badge: null
+    },
+    
+    // Gadgets (5 products)
+    {
+        id: 401,
+        name: "Wireless Headphones Pro",
+        category: "gadgets",
+        gender: "unisex",
+        price: 29999,
+        originalPrice: 39999,
+        rating: 4.8,
+        ratingCount: 567,
+        image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        description: "Premium wireless noise cancelling headphones.",
+        tags: ["headphones", "wireless", "premium"],
+        badge: "Tech"
+    },
+    {
+        id: 402,
+        name: "Smartphone Ultra",
+        category: "gadgets",
+        gender: "unisex",
+        price: 89999,
+        originalPrice: 119999,
+        rating: 4.9,
+        ratingCount: 789,
+        image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        description: "Latest smartphone with advanced camera system.",
+        tags: ["smartphone", "premium", "camera"],
+        badge: "Latest"
+    },
+    {
+        id: 403,
+        name: "Smart Fitness Band",
+        category: "gadgets",
+        gender: "unisex",
+        price: 9999,
+        originalPrice: 14999,
+        rating: 4.6,
+        ratingCount: 456,
+        image: "https://images.unsplash.com/photo-1576243345690-4e4b79b63288?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        description: "Advanced fitness band with health monitoring.",
+        tags: ["fitness", "smart", "health"],
+        badge: "Fitness"
+    },
+    {
+        id: 404,
+        name: "Portable Bluetooth Speaker",
+        category: "gadgets",
+        gender: "unisex",
+        price: 8999,
+        originalPrice: 12999,
+        rating: 4.7,
+        ratingCount: 234,
+        image: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        description: "High-quality portable Bluetooth speaker.",
+        tags: ["speaker", "bluetooth", "portable"],
+        badge: "Audio"
+    },
+    {
+        id: 405,
+        name: "Tablet Pro",
+        category: "gadgets",
+        gender: "unisex",
+        price: 59999,
+        originalPrice: 79999,
+        rating: 4.8,
+        ratingCount: 189,
+        image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        description: "Professional tablet for work and creativity.",
+        tags: ["tablet", "pro", "productivity"],
+        badge: "Pro"
     }
 ];
 
@@ -297,19 +381,14 @@ function init() {
     loadCart();
     loadWishlist();
     
-    // Hide loading screen
-    setTimeout(() => {
-        document.querySelector('.loading-screen').classList.add('loaded');
-        
-        // Add scroll effect to header
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                document.querySelector('.header').classList.add('scrolled');
-            } else {
-                document.querySelector('.header').classList.remove('scrolled');
-            }
-        });
-    }, 1000);
+    // Add scroll effect to header
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            document.querySelector('.header').classList.add('scrolled');
+        } else {
+            document.querySelector('.header').classList.remove('scrolled');
+        }
+    });
 }
 
 // Set up all event listeners
@@ -389,15 +468,37 @@ function setupEventListeners() {
             
             // Update gender title based on category
             const categoryTitles = {
-                'clothing': 'Apparel',
-                'watches': 'Timepieces',
+                'clothing': 'Clothing',
                 'shoes': 'Footwear',
-                'accessories': 'Accessories'
+                'watches': 'Watches',
+                'accessories': 'Accessories',
+                'gadgets': 'Gadgets'
             };
             
             document.getElementById('gender-title').innerHTML = `${categoryTitles[category]} - Select <span class="text-gradient">Collection</span>`;
             
             // Show gender selection page
+            showPage('gender-selection');
+        });
+    });
+    
+    // Category links in footer
+    document.querySelectorAll('.category-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const category = e.target.getAttribute('data-category');
+            currentState.currentCategory = category;
+            
+            const categoryTitles = {
+                'clothing': 'Clothing',
+                'shoes': 'Footwear',
+                'watches': 'Watches',
+                'accessories': 'Accessories',
+                'gadgets': 'Gadgets'
+            };
+            
+            document.getElementById('gender-title').innerHTML = `${categoryTitles[category]} - Select <span class="text-gradient">Collection</span>`;
+            
             showPage('gender-selection');
         });
     });
@@ -422,14 +523,16 @@ function setupEventListeners() {
             // Update listing title
             const genderTitles = {
                 'men': 'Men\'s',
-                'women': 'Women\'s'
+                'women': 'Women\'s',
+                'unisex': 'Unisex'
             };
             
             const categoryTitles = {
-                'clothing': 'Apparel',
-                'watches': 'Timepieces',
+                'clothing': 'Clothing',
                 'shoes': 'Footwear',
-                'accessories': 'Accessories'
+                'watches': 'Watches',
+                'accessories': 'Accessories',
+                'gadgets': 'Gadgets'
             };
             
             document.getElementById('listing-title').textContent = `${genderTitles[gender]} ${categoryTitles[currentState.currentCategory]}`;
@@ -460,97 +563,4 @@ function setupEventListeners() {
         filterProducts();
     });
     
-    // Load more products
-    document.getElementById('load-more').addEventListener('click', loadMoreProducts);
-    
-    // Cart functionality
-    document.querySelector('.cart-btn').addEventListener('click', () => {
-        document.querySelector('.cart-sidebar').classList.add('active');
-        document.querySelector('.cart-overlay').classList.add('active');
-        renderCartItems();
-    });
-    
-    document.querySelector('.cart-close').addEventListener('click', () => {
-        document.querySelector('.cart-sidebar').classList.remove('active');
-        document.querySelector('.cart-overlay').classList.remove('active');
-    });
-    
-    document.querySelector('.cart-overlay').addEventListener('click', () => {
-        document.querySelector('.cart-sidebar').classList.remove('active');
-        document.querySelector('.cart-overlay').classList.remove('active');
-    });
-    
-    document.querySelector('.checkout-btn').addEventListener('click', () => {
-        if (currentState.cart.length === 0) {
-            showToast('Your cart is empty', 'error');
-            return;
-        }
-        showToast('Checkout functionality would be implemented with backend integration', 'info');
-    });
-    
-    // Wishlist button
-    document.querySelector('.wishlist-btn').addEventListener('click', () => {
-        showToast('Wishlist page would show here', 'info');
-    });
-}
-
-// Show a specific page
-function showPage(pageId) {
-    // Hide all pages
-    document.querySelectorAll('.page').forEach(page => {
-        page.classList.remove('active');
-    });
-    
-    // Show the requested page
-    document.getElementById(pageId).classList.add('active');
-    
-    // Close mobile menu if open
-    document.querySelector('.nav-menu').classList.remove('active');
-    
-    // Reset display count when changing pages
-    if (pageId === 'product-listing') {
-        currentState.displayCount = 8;
-    }
-}
-
-// Filter and display products based on current state
-function filterProducts() {
-    let filteredProducts = [...products];
-    
-    // Filter by category and gender
-    if (currentState.currentCategory && currentState.currentGender) {
-        filteredProducts = filteredProducts.filter(product => {
-            // Handle category mapping
-            if (currentState.currentCategory === 'clothing') {
-                const clothingCategories = ['shirt', 'pant', 'jeans', 'tshirt', 'kurti', 'dress', 'jacket', 'sweater', 'skirt'];
-                return clothingCategories.includes(product.category) && 
-                       (product.gender === currentState.currentGender || product.gender === 'unisex');
-            }
-            
-            if (currentState.currentCategory === 'watches' && product.category === 'watch') {
-                return product.gender === currentState.currentGender || product.gender === 'unisex';
-            }
-            
-            if (currentState.currentCategory === 'shoes' && product.category === 'shoes') {
-                return product.gender === currentState.currentGender || product.gender === 'unisex';
-            }
-            
-            if (currentState.currentCategory === 'accessories' && product.category === 'accessories') {
-                return product.gender === currentState.currentGender || product.gender === 'unisex';
-            }
-            
-            return false;
-        });
-    }
-    
-    // Filter by selected category filter
-    const categoryFilter = document.getElementById('category-filter').value;
-    if (categoryFilter !== 'all') {
-        filteredProducts = filteredProducts.filter(product => product.category === categoryFilter);
-    }
-    
-    // Filter by search query
-    if (currentState.searchQuery) {
-        filteredProducts = filteredProducts.filter(product => 
-            product.name.toLowerCase().includes(currentState.searchQuery) ||
-         
+    // Load more produ
