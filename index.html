@@ -33,11 +33,11 @@
                 
                 <nav class="nav-menu">
                     <ul>
-                        <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
-                        <li><a href="#" class="nav-link" data-page="categories">Collections</a></li>
-                        <li><a href="#" class="nav-link" data-page="new-arrivals">New Arrivals</a></li>
-                        <li><a href="#" class="nav-link" data-page="trending">Trending</a></li>
-                        <li><a href="#" class="nav-link" data-page="premium">Premium</a></li>
+                        <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+                        <li><a href="#collections" class="nav-link" data-page="collections">Collections</a></li>
+                        <li><a href="#new" class="nav-link" data-page="new">New Arrivals</a></li>
+                        <li><a href="#trending" class="nav-link" data-page="trending">Trending</a></li>
+                        <li><a href="#premium" class="nav-link" data-page="premium">Premium</a></li>
                     </ul>
                 </nav>
                 
@@ -47,14 +47,11 @@
                     </button>
                     <button class="icon-btn wishlist-btn" aria-label="Wishlist">
                         <i class="fas fa-heart"></i>
-                        <span class="wishlist-count">3</span>
+                        <span class="wishlist-count">0</span>
                     </button>
                     <button class="icon-btn cart-btn" aria-label="Cart">
                         <i class="fas fa-shopping-bag"></i>
                         <span class="cart-count">0</span>
-                    </button>
-                    <button class="icon-btn user-btn" aria-label="Account">
-                        <i class="fas fa-user"></i>
                     </button>
                 </div>
             </div>
@@ -65,9 +62,9 @@
             <div class="search-container">
                 <input type="text" class="search-input" placeholder="Search for premium products, brands, and collections...">
                 <div class="search-suggestions">
-                    <span class="suggestion-tag">Trending: Luxury Watches</span>
-                    <span class="suggestion-tag">New: Summer Collection</span>
-                    <span class="suggestion-tag">Premium: Leather Goods</span>
+                    <span class="suggestion-tag">Men's Watches</span>
+                    <span class="suggestion-tag">Women's Dresses</span>
+                    <span class="suggestion-tag">Leather Bags</span>
                 </div>
                 <button class="search-close" aria-label="Close search">
                     <i class="fas fa-times"></i>
@@ -90,10 +87,10 @@
                         <div class="hero-tag">Premium Collection</div>
                         <h2 class="hero-title">Elevate Your <span class="text-gradient">Style</span> Universe</h2>
                         <p class="hero-subtitle">Discover curated luxury fashion from emerging designers and premium brands worldwide</p>
-                        <a href="#categories" class="hero-cta pulse-animation">
+                        <button class="hero-cta pulse-animation" id="explore-collections">
                             <span>Explore Collections</span>
                             <i class="fas fa-arrow-right"></i>
-                        </a>
+                        </button>
                     </div>
                     <div class="hero-stats">
                         <div class="stat-item">
@@ -144,7 +141,7 @@
                         </div>
                     </div>
                     
-                    <div class="category-card" data-category="footwear">
+                    <div class="category-card" data-category="shoes">
                         <div class="category-icon">
                             <i class="fas fa-shoe-prints"></i>
                         </div>
@@ -173,66 +170,6 @@
                             <i class="fas fa-arrow-right"></i>
                         </div>
                     </div>
-                    
-                    <div class="category-card" data-category="bags">
-                        <div class="category-icon">
-                            <i class="fas fa-shopping-bag"></i>
-                        </div>
-                        <div class="category-content">
-                            <h3 class="category-title">Bags</h3>
-                            <p class="category-desc">Designer handbags & luggage</p>
-                            <div class="category-count">75+ items</div>
-                        </div>
-                        <div class="category-hover">
-                            <span>Explore Now</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="category-card" data-category="perfumes">
-                        <div class="category-icon">
-                            <i class="fas fa-spray-can"></i>
-                        </div>
-                        <div class="category-content">
-                            <h3 class="category-title">Fragrances</h3>
-                            <p class="category-desc">Luxury perfumes & colognes</p>
-                            <div class="category-count">60+ items</div>
-                        </div>
-                        <div class="category-hover">
-                            <span>Explore Now</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="category-card" data-category="eyewear">
-                        <div class="category-icon">
-                            <i class="fas fa-glasses"></i>
-                        </div>
-                        <div class="category-content">
-                            <h3 class="category-title">Eyewear</h3>
-                            <p class="category-desc">Designer sunglasses & glasses</p>
-                            <div class="category-count">45+ items</div>
-                        </div>
-                        <div class="category-hover">
-                            <span>Explore Now</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="category-card" data-category="electronics">
-                        <div class="category-icon">
-                            <i class="fas fa-headphones"></i>
-                        </div>
-                        <div class="category-content">
-                            <h3 class="category-title">Tech & Audio</h3>
-                            <p class="category-desc">Premium gadgets & headphones</p>
-                            <div class="category-count">85+ items</div>
-                        </div>
-                        <div class="category-hover">
-                            <span>Explore Now</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
                 </div>
                 
                 <!-- Featured Brands -->
@@ -254,13 +191,13 @@
         <section class="page" id="gender-selection">
             <div class="container">
                 <button class="back-btn" id="back-to-categories">
-                    <i class="fas fa-arrow-left"></i> Back to Collections
+                    <i class="fas fa-arrow-left"></i> Back to Categories
                 </button>
                 
                 <h2 class="section-title" id="gender-title">Select <span class="text-gradient">Collection</span></h2>
                 <div class="gender-grid">
                     <div class="gender-card" data-gender="men">
-                        <div class="gender-image" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');"></div>
+                        <div class="gender-image" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80')"></div>
                         <div class="gender-overlay">
                             <div class="gender-content">
                                 <h3 class="gender-name">Men's Collection</h3>
@@ -275,7 +212,7 @@
                     </div>
                     
                     <div class="gender-card" data-gender="women">
-                        <div class="gender-image" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');"></div>
+                        <div class="gender-image" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80')"></div>
                         <div class="gender-overlay">
                             <div class="gender-content">
                                 <h3 class="gender-name">Women's Collection</h3>
@@ -287,21 +224,6 @@
                             </div>
                         </div>
                         <div class="gender-badge">Women</div>
-                    </div>
-                    
-                    <div class="gender-card" data-gender="unisex">
-                        <div class="gender-image" style="background-image: url('https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');"></div>
-                        <div class="gender-overlay">
-                            <div class="gender-content">
-                                <h3 class="gender-name">Unisex Collection</h3>
-                                <p class="gender-desc">Gender-neutral premium fashion</p>
-                                <div class="gender-stats">
-                                    <span><i class="fas fa-tshirt"></i> 100+ Products</span>
-                                    <span><i class="fas fa-star"></i> Contemporary Brands</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gender-badge">Unisex</div>
                     </div>
                 </div>
             </div>
@@ -331,15 +253,9 @@
                                 <option value="tshirt">T-Shirts</option>
                                 <option value="kurti">Kurtis</option>
                                 <option value="dress">Dresses</option>
-                                <option value="jacket">Jackets</option>
-                                <option value="sweater">Sweaters</option>
                                 <option value="watch">Watches</option>
                                 <option value="shoes">Footwear</option>
                                 <option value="accessories">Accessories</option>
-                                <option value="bags">Bags</option>
-                                <option value="perfumes">Fragrances</option>
-                                <option value="eyewear">Eyewear</option>
-                                <option value="electronics">Tech & Audio</option>
                             </select>
                         </div>
                         
@@ -350,31 +266,137 @@
                                 <option value="price-low">Price: Low to High</option>
                                 <option value="price-high">Price: High to Low</option>
                                 <option value="name">Name: A to Z</option>
-                                <option value="newest">Newest First</option>
                                 <option value="rating">Top Rated</option>
                             </select>
-                        </div>
-                        
-                        <div class="view-toggle">
-                            <button class="view-btn active" data-view="grid">
-                                <i class="fas fa-th"></i>
-                            </button>
-                            <button class="view-btn" data-view="list">
-                                <i class="fas fa-list"></i>
-                            </button>
                         </div>
                     </div>
                 </div>
                 
-                <div class="products-container">
+                <div class="products-container grid-view">
                     <div class="product-grid" id="product-grid">
                         <!-- Products loaded via JavaScript -->
-                    </div>
-                    
-                    <div class="product-list" id="product-list">
-                        <!-- List view loaded via JavaScript -->
                     </div>
                 </div>
                 
                 <div class="no-products" id="no-products">
-                    <div class="no-products-
+                    <div class="no-products-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>No products match your search</h3>
+                    <p>Try adjusting your filters or search terms to find what you're looking for.</p>
+                    <button class="clear-filters" id="clear-filters">Clear All Filters</button>
+                </div>
+                
+                <!-- Load More Button -->
+                <div class="load-more-section">
+                    <button class="load-more-btn" id="load-more">
+                        <span>Load More Products</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Cart Sidebar -->
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <div class="cart-subtitle">Premium items selected</div>
+                <button class="cart-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items loaded via JavaScript -->
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <p>Your cart is empty</p>
+                    <small>Add premium products to your cart</small>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span class="total-amount">₹0</span>
+                    </div>
+                    <div class="cart-shipping">
+                        <span>Shipping:</span>
+                        <span class="shipping-amount">Free</span>
+                    </div>
+                </div>
+                <button class="checkout-btn">
+                    <span>Proceed to Checkout</span>
+                    <i class="fas fa-lock"></i>
+                </button>
+                <div class="secure-checkout">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Secure SSL Encrypted Checkout</span>
+                </div>
+            </div>
+        </div>
+        <div class="cart-overlay"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Offer.<span class="logo-accent">Sprout</span></h3>
+                    <p class="footer-tagline">Curated premium fashion marketplace for the discerning individual.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Shop</h4>
+                        <ul>
+                            <li><a href="#" class="nav-link" data-page="gender-selection" data-gender="men">Men's Collection</a></li>
+                            <li><a href="#" class="nav-link" data-page="gender-selection" data-gender="women">Women's Collection</a></li>
+                            <li><a href="#" class="nav-link" data-page="home">All Categories</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Shipping Policy</a></li>
+                            <li><a href="#">Returns & Exchanges</a></li>
+                            <li><a href="#">Contact Support</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Newsletter</h4>
+                        <p class="newsletter-text">Subscribe for exclusive offers and style inspiration</p>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+                <p class="copyright">&copy; 2023 Offer.Sprout. All rights reserved. | Premium fashion marketplace demo</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

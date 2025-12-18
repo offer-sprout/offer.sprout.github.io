@@ -32,20 +32,6 @@ body {
     background-color: var(--primary-color);
     line-height: 1.6;
     overflow-x: hidden;
-    position: relative;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 20% 50%, rgba(42, 42, 42, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(118, 75, 162, 0.05) 0%, transparent 50%);
-    z-index: -1;
-    pointer-events: none;
 }
 
 .container {
@@ -225,6 +211,7 @@ img {
     transition: var(--transition);
     position: relative;
     padding: 8px 0;
+    cursor: pointer;
 }
 
 .nav-link::before {
@@ -500,6 +487,8 @@ img {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    border: none;
+    cursor: pointer;
 }
 
 .hero-cta::before {
@@ -737,6 +726,8 @@ img {
     background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius);
     transition: var(--transition);
+    cursor: pointer;
+    border: none;
 }
 
 .back-btn:hover {
@@ -907,34 +898,6 @@ img {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-.view-toggle {
-    display: flex;
-    gap: 10px;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 5px;
-    border-radius: var(--radius);
-}
-
-.view-btn {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--radius-sm);
-    color: var(--text-secondary);
-    transition: var(--transition);
-}
-
-.view-btn.active {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--text-primary);
-}
-
-.view-btn:hover:not(.active) {
-    color: var(--text-primary);
-}
-
 /* Products Container */
 .products-container {
     margin-bottom: 80px;
@@ -944,28 +907,6 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
-}
-
-.product-list {
-    display: none;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.products-container.grid-view .product-grid {
-    display: grid;
-}
-
-.products-container.grid-view .product-list {
-    display: none;
-}
-
-.products-container.list-view .product-grid {
-    display: none;
-}
-
-.products-container.list-view .product-list {
-    display: flex;
 }
 
 /* Product Card (Grid View) */
@@ -993,4 +934,63 @@ img {
     z-index: 0;
 }
 
-.pro
+.product-card:hover::before {
+    opacity: 0.03;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-hover);
+}
+
+.product-image {
+    height: 300px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.03);
+    background-size: cover;
+    background-position: center;
+    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    z-index: 1;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--gradient-accent);
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.product-discount {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ff4757;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.product-info {
+    padding: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.product-category {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.05);

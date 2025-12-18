@@ -1,6 +1,6 @@
-// Enhanced Dummy Product Data (200+ products)
+// Dummy Product Data (Simplified but functional)
 const products = [
-    // Men's Clothing (50 products)
+    // Men's Clothing
     {
         id: 1,
         name: "Premium Slim Fit Cotton Shirt",
@@ -85,36 +85,8 @@ const products = [
         tags: ["silk", "polo", "casual"],
         badge: null
     },
-    {
-        id: 7,
-        name: "Technical Performance Jacket",
-        category: "jacket",
-        gender: "men",
-        price: 12999,
-        originalPrice: 15999,
-        rating: 4.7,
-        ratingCount: 89,
-        image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        description: "Gore-Tex technical jacket with temperature regulation.",
-        tags: ["technical", "performance", "waterproof"],
-        badge: "Tech"
-    },
-    {
-        id: 8,
-        name: "Linen Blend Suit",
-        category: "suit",
-        gender: "men",
-        price: 24999,
-        originalPrice: 32999,
-        rating: 4.9,
-        ratingCount: 67,
-        image: "https://images.unsplash.com/photo-1594938374188-1e8cfc57e7c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        description: "Italian linen-wool blend summer suit.",
-        tags: ["suit", "linen", "formal"],
-        badge: "Luxury"
-    },
     
-    // Women's Clothing (50 products)
+    // Women's Clothing
     {
         id: 101,
         name: "Silk Evening Gown",
@@ -200,7 +172,7 @@ const products = [
         badge: "New"
     },
     
-    // Watches (30 products)
+    // Watches
     {
         id: 201,
         name: "Automatic Chronograph Watch",
@@ -229,22 +201,8 @@ const products = [
         tags: ["smart", "fitness", "tech"],
         badge: "Tech"
     },
-    {
-        id: 203,
-        name: "Diamond Bezel Watch",
-        category: "watch",
-        gender: "women",
-        price: 89999,
-        originalPrice: 119999,
-        rating: 4.9,
-        ratingCount: 78,
-        image: "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        description: "18k gold watch with diamond bezel.",
-        tags: ["diamond", "gold", "luxury"],
-        badge: "Premium"
-    },
     
-    // Footwear (40 products)
+    // Footwear
     {
         id: 301,
         name: "Limited Edition Sneakers",
@@ -273,26 +231,12 @@ const products = [
         tags: ["leather", "loafers", "italian"],
         badge: "Premium"
     },
-    {
-        id: 303,
-        name: "Designer High Heels",
-        category: "shoes",
-        gender: "women",
-        price: 17999,
-        originalPrice: 22999,
-        rating: 4.6,
-        ratingCount: 189,
-        image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        description: "Designer crystal-embellished high heels.",
-        tags: ["heels", "designer", "evening"],
-        badge: "Luxury"
-    },
     
-    // Accessories (20 products)
+    // Accessories
     {
         id: 401,
         name: "Leather Briefcase",
-        category: "bags",
+        category: "accessories",
         gender: "men",
         price: 24999,
         originalPrice: 32999,
@@ -306,7 +250,7 @@ const products = [
     {
         id: 402,
         name: "Designer Handbag",
-        category: "bags",
+        category: "accessories",
         gender: "women",
         price: 59999,
         originalPrice: 79999,
@@ -320,7 +264,7 @@ const products = [
     {
         id: 403,
         name: "Aviator Sunglasses",
-        category: "eyewear",
+        category: "accessories",
         gender: "unisex",
         price: 12999,
         originalPrice: 16999,
@@ -330,209 +274,283 @@ const products = [
         description: "Polarized aviator sunglasses with UV protection.",
         tags: ["sunglasses", "aviator", "polarized"],
         badge: "Popular"
-    },
-    
-    // Fragrances (15 products)
-    {
-        id: 501,
-        name: "Signature Eau de Parfum",
-        category: "perfumes",
-        gender: "unisex",
-        price: 8999,
-        originalPrice: 11999,
-        rating: 4.8,
-        ratingCount: 189,
-        image: "https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        description: "Signature fragrance with notes of amber and oud.",
-        tags: ["perfume", "signature", "luxury"],
-        badge: "Signature"
-    },
-    
-    // Tech & Audio (15 products)
-    {
-        id: 601,
-        name: "Noise Cancelling Headphones",
-        category: "electronics",
-        gender: "unisex",
-        price: 29999,
-        originalPrice: 39999,
-        rating: 4.8,
-        ratingCount: 567,
-        image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        description: "Premium wireless noise cancelling headphones.",
-        tags: ["headphones", "wireless", "premium"],
-        badge: "Tech"
     }
 ];
 
-// Add more products to reach 200+ (simplified for demo)
-for (let i = 7; i <= 50; i++) {
-    // Men's clothing
-    products.push({
-        id: 1000 + i,
-        name: `Men's Premium Product ${i}`,
-        category: ["shirt", "pant", "jeans", "tshirt", "jacket", "sweater"][Math.floor(Math.random() * 6)],
-        gender: "men",
-        price: Math.floor(Math.random() * 15000) + 1999,
-        originalPrice: Math.floor(Math.random() * 20000) + 2999,
-        rating: 3.5 + Math.random() * 1.5,
-        ratingCount: Math.floor(Math.random() * 500),
-        image: `https://images.unsplash.com/photo-${1500000 + i}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`,
-        description: "Premium quality product with excellent craftsmanship.",
-        tags: ["premium", "quality", "design"],
-        badge: Math.random() > 0.7 ? ["New", "Popular", "Best Seller"][Math.floor(Math.random() * 3)] : null
-    });
+// Current State
+let currentState = {
+    currentCategory: null,
+    currentGender: null,
+    cart: [],
+    wishlist: [],
+    searchQuery: '',
+    filteredProducts: [],
+    displayCount: 8
+};
+
+// Initialize the app
+function init() {
+    // Set up event listeners
+    setupEventListeners();
     
-    // Women's clothing
-    products.push({
-        id: 2000 + i,
-        name: `Women's Premium Product ${i}`,
-        category: ["dress", "kurti", "skirt", "tshirt", "jacket", "sweater"][Math.floor(Math.random() * 6)],
-        gender: "women",
-        price: Math.floor(Math.random() * 18000) + 1999,
-        originalPrice: Math.floor(Math.random() * 23000) + 2999,
-        rating: 3.5 + Math.random() * 1.5,
-        ratingCount: Math.floor(Math.random() * 500),
-        image: `https://images.unsplash.com/photo-${1600000 + i}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`,
-        description: "Elegant and sophisticated premium product.",
-        tags: ["elegant", "sophisticated", "design"],
-        badge: Math.random() > 0.7 ? ["New", "Popular", "Luxury"][Math.floor(Math.random() * 3)] : null
-    });
+    // Load cart and wishlist from localStorage
+    loadCart();
+    loadWishlist();
+    
+    // Hide loading screen
+    setTimeout(() => {
+        document.querySelector('.loading-screen').classList.add('loaded');
+        
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                document.querySelector('.header').classList.add('scrolled');
+            } else {
+                document.querySelector('.header').classList.remove('scrolled');
+            }
+        });
+    }, 1000);
 }
 
-// Add more categories
-for (let i = 1; i <= 20; i++) {
-    // Watches
-    products.push({
-        id: 3000 + i,
-        name: `Luxury Watch ${i}`,
-        category: "watch",
-        gender: Math.random() > 0.5 ? "men" : "women",
-        price: Math.floor(Math.random() * 100000) + 19999,
-        originalPrice: Math.floor(Math.random() * 130000) + 29999,
-        rating: 4 + Math.random() * 1,
-        ratingCount: Math.floor(Math.random() * 300),
-        image: `https://images.unsplash.com/photo-${1700000 + i}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`,
-        description: "Premium luxury timepiece with exceptional craftsmanship.",
-        tags: ["luxury", "timepiece", "premium"],
-        badge: Math.random() > 0.5 ? "Luxury" : null
-    });
-    
-    // Shoes
-    products.push({
-        id: 4000 + i,
-        name: `Designer Footwear ${i}`,
-        category: "shoes",
-        gender: ["men", "women", "unisex"][Math.floor(Math.random() * 3)],
-        price: Math.floor(Math.random() * 20000) + 2999,
-        originalPrice: Math.floor(Math.random() * 25000) + 3999,
-        rating: 4 + Math.random() * 1,
-        ratingCount: Math.floor(Math.random() * 400),
-        image: `https://images.unsplash.com/photo-${1800000 + i}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`,
-        description: "Designer footwear with premium materials.",
-        tags: ["designer", "footwear", "premium"],
-        badge: Math.random() > 0.6 ? "Designer" : null
-    });
-    
-    // Bags
-    products.push({
-        id: 5000 + i,
-        name: `Premium Bag ${i}`,
-        category: "bags",
-        gender: Math.random() > 0.5 ? "men" : "women",
-        price: Math.floor(Math.random() * 50000) + 9999,
-        originalPrice: Math.floor(Math.random() * 65000) + 14999,
-        rating: 4.2 + Math.random() * 0.8,
-        ratingCount: Math.floor(Math.random() * 200),
-        image: `https://images.unsplash.com/photo-${1900000 + i}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`,
-        description: "Premium designer bag with exceptional quality.",
-        tags: ["designer", "bag", "premium"],
-        badge: Math.random() > 0.7 ? "Premium" : null
-    });
-    
-    // Fragrances
-    products.push({
-        id: 6000 + i,
-        name: `Luxury Fragrance ${i}`,
-        category: "perfumes",
-        gender: ["men", "women", "unisex"][Math.floor(Math.random() * 3)],
-        price: Math.floor(Math.random() * 15000) + 2999,
-        originalPrice: Math.floor(Math.random() * 20000) + 3999,
-        rating: 4.3 + Math.random() * 0.7,
-        ratingCount: Math.floor(Math.random() * 150),
-        image: `https://images.unsplash.com/photo-${2000000 + i}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`,
-        description: "Exclusive luxury fragrance with unique notes.",
-        tags: ["fragrance", "luxury", "exclusive"],
-        badge: Math.random() > 0.8 ? "Exclusive" : null
-    });
-    
-    // Electronics
-    products.push({
-        id: 7000 + i,
-        name: `Premium Tech ${i}`,
-        category: "electronics",
-        gender: "unisex",
-        price: Math.floor(Math.random() * 50000) + 9999,
-        originalPrice: Math.floor(Math.random() * 65000) + 14999,
-        rating: 4.5 + Math.random() * 0.5,
-        ratingCount: Math.floor(Math.random() * 500),
-        image: `https://images.unsplash.com/photo-${2100000 + i}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`,
-        description: "Premium technology product with advanced features.",
-        tags: ["tech", "premium", "advanced"],
-        badge: Math.random() > 0.6 ? "Tech" : null
-    });
-    
-    // Eyewear
-    products.push({
-        id: 8000 + i,
-        name: `Designer Eyewear ${i}`,
-        category: "eyewear",
-        gender: ["men", "women", "unisex"][Math.floor(Math.random() * 3)],
-        price: Math.floor(Math.random() * 20000) + 4999,
-        originalPrice: Math.floor(Math.random() * 25000) + 6999,
-        rating: 4.4 + Math.random() * 0.6,
-        ratingCount: Math.floor(Math.random() * 250),
-        image: `https://images.unsplash.com/photo-${2200000 + i}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`,
-        description: "Designer eyewear with premium lenses.",
-        tags: ["eyewear", "designer", "premium"],
-        badge: Math.random() > 0.7 ? "Designer" : null
-    });
-}
-
-// DOM Elements
-const DOM = {
-    // Pages
-    pages: document.querySelectorAll('.page'),
-    homePage: document.getElementById('home'),
-    genderPage: document.getElementById('gender-selection'),
-    productPage: document.getElementById('product-listing'),
-    
+// Set up all event listeners
+function setupEventListeners() {
     // Navigation
-    navLinks: document.querySelectorAll('.nav-link'),
-    menuToggle: document.querySelector('.menu-toggle'),
-    navMenu: document.querySelector('.nav-menu'),
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const page = e.target.getAttribute('data-page');
+            
+            if (page === 'collections' || page === 'home') {
+                showPage('home');
+            } else if (page === 'gender-selection') {
+                const gender = e.target.getAttribute('data-gender');
+                if (gender) {
+                    currentState.currentGender = gender;
+                    showPage('gender-selection');
+                }
+            } else {
+                // For other pages, just show home for now
+                showPage('home');
+            }
+            
+            // Update active nav link
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            e.target.classList.add('active');
+            
+            // Close mobile menu if open
+            document.querySelector('.nav-menu').classList.remove('active');
+        });
+    });
     
-    // Search
-    searchToggle: document.querySelector('.search-toggle'),
-    searchOverlay: document.querySelector('.search-overlay'),
-    searchClose: document.querySelector('.search-close'),
-    searchInput: document.querySelector('.search-input'),
-    searchSubmit: document.querySelector('.search-submit'),
-    searchSuggestions: document.querySelectorAll('.suggestion-tag'),
+    // Mobile menu toggle
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+        document.querySelector('.nav-menu').classList.toggle('active');
+    });
     
-    // Categories
-    categoryCards: document.querySelectorAll('.category-card'),
-    backToCategories: document.getElementById('back-to-categories'),
+    // Search functionality
+    document.querySelector('.search-toggle').addEventListener('click', () => {
+        document.querySelector('.search-overlay').classList.add('active');
+        document.querySelector('.search-input').focus();
+    });
     
-    // Gender Selection
-    genderCards: document.querySelectorAll('.gender-card'),
-    backToGender: document.getElementById('back-to-gender'),
-    genderTitle: document.getElementById('gender-title'),
+    document.querySelector('.search-close').addEventListener('click', () => {
+        document.querySelector('.search-overlay').classList.remove('active');
+        document.querySelector('.search-input').value = '';
+        currentState.searchQuery = '';
+        filterProducts();
+    });
     
-    // Product Listing
-    listingTitle: document.getElementById('listing-title'),
-    listingSubtitle: document.getElementById('listing-subtitle'),
-    productGrid: document.getElementById('product-grid'),
-    productList: document.getElementById('product-list'),
-    noProducts: document.getElementById('no-products'),
-    categoryFilte
+    document.querySelector('.search-submit').addEventListener('click', () => {
+        currentState.searchQuery = document.querySelector('.search-input').value.toLowerCase();
+        filterProducts();
+        document.querySelector('.search-overlay').classList.remove('active');
+    });
+    
+    document.querySelector('.search-input').addEventListener('keyup', (e) => {
+        if (e.key === 'Enter') {
+            currentState.searchQuery = document.querySelector('.search-input').value.toLowerCase();
+            filterProducts();
+            document.querySelector('.search-overlay').classList.remove('active');
+        }
+    });
+    
+    // Search suggestions
+    document.querySelectorAll('.suggestion-tag').forEach(tag => {
+        tag.addEventListener('click', () => {
+            document.querySelector('.search-input').value = tag.textContent;
+        });
+    });
+    
+    // Category selection
+    document.querySelectorAll('.category-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const category = card.getAttribute('data-category');
+            currentState.currentCategory = category;
+            
+            // Update gender title based on category
+            const categoryTitles = {
+                'clothing': 'Apparel',
+                'watches': 'Timepieces',
+                'shoes': 'Footwear',
+                'accessories': 'Accessories'
+            };
+            
+            document.getElementById('gender-title').innerHTML = `${categoryTitles[category]} - Select <span class="text-gradient">Collection</span>`;
+            
+            // Show gender selection page
+            showPage('gender-selection');
+        });
+    });
+    
+    // Explore collections button
+    document.getElementById('explore-collections').addEventListener('click', () => {
+        showPage('home');
+        document.querySelector('.categories-grid').scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    // Back to categories
+    document.getElementById('back-to-categories').addEventListener('click', () => {
+        showPage('home');
+    });
+    
+    // Gender selection
+    document.querySelectorAll('.gender-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const gender = card.getAttribute('data-gender');
+            currentState.currentGender = gender;
+            
+            // Update listing title
+            const genderTitles = {
+                'men': 'Men\'s',
+                'women': 'Women\'s'
+            };
+            
+            const categoryTitles = {
+                'clothing': 'Apparel',
+                'watches': 'Timepieces',
+                'shoes': 'Footwear',
+                'accessories': 'Accessories'
+            };
+            
+            document.getElementById('listing-title').textContent = `${genderTitles[gender]} ${categoryTitles[currentState.currentCategory]}`;
+            document.getElementById('listing-subtitle').textContent = `Curated selection of premium ${genderTitles[gender].toLowerCase()} ${categoryTitles[currentState.currentCategory].toLowerCase()}`;
+            
+            // Show product listing page
+            showPage('product-listing');
+            
+            // Load products for selected category and gender
+            filterProducts();
+        });
+    });
+    
+    // Back to gender selection
+    document.getElementById('back-to-gender').addEventListener('click', () => {
+        showPage('gender-selection');
+    });
+    
+    // Product filtering
+    document.getElementById('category-filter').addEventListener('change', filterProducts);
+    document.getElementById('sort-by').addEventListener('change', filterProducts);
+    
+    // Clear filters
+    document.getElementById('clear-filters').addEventListener('click', () => {
+        document.getElementById('category-filter').value = 'all';
+        document.getElementById('sort-by').value = 'featured';
+        currentState.searchQuery = '';
+        filterProducts();
+    });
+    
+    // Load more products
+    document.getElementById('load-more').addEventListener('click', loadMoreProducts);
+    
+    // Cart functionality
+    document.querySelector('.cart-btn').addEventListener('click', () => {
+        document.querySelector('.cart-sidebar').classList.add('active');
+        document.querySelector('.cart-overlay').classList.add('active');
+        renderCartItems();
+    });
+    
+    document.querySelector('.cart-close').addEventListener('click', () => {
+        document.querySelector('.cart-sidebar').classList.remove('active');
+        document.querySelector('.cart-overlay').classList.remove('active');
+    });
+    
+    document.querySelector('.cart-overlay').addEventListener('click', () => {
+        document.querySelector('.cart-sidebar').classList.remove('active');
+        document.querySelector('.cart-overlay').classList.remove('active');
+    });
+    
+    document.querySelector('.checkout-btn').addEventListener('click', () => {
+        if (currentState.cart.length === 0) {
+            showToast('Your cart is empty', 'error');
+            return;
+        }
+        showToast('Checkout functionality would be implemented with backend integration', 'info');
+    });
+    
+    // Wishlist button
+    document.querySelector('.wishlist-btn').addEventListener('click', () => {
+        showToast('Wishlist page would show here', 'info');
+    });
+}
+
+// Show a specific page
+function showPage(pageId) {
+    // Hide all pages
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+    
+    // Show the requested page
+    document.getElementById(pageId).classList.add('active');
+    
+    // Close mobile menu if open
+    document.querySelector('.nav-menu').classList.remove('active');
+    
+    // Reset display count when changing pages
+    if (pageId === 'product-listing') {
+        currentState.displayCount = 8;
+    }
+}
+
+// Filter and display products based on current state
+function filterProducts() {
+    let filteredProducts = [...products];
+    
+    // Filter by category and gender
+    if (currentState.currentCategory && currentState.currentGender) {
+        filteredProducts = filteredProducts.filter(product => {
+            // Handle category mapping
+            if (currentState.currentCategory === 'clothing') {
+                const clothingCategories = ['shirt', 'pant', 'jeans', 'tshirt', 'kurti', 'dress', 'jacket', 'sweater', 'skirt'];
+                return clothingCategories.includes(product.category) && 
+                       (product.gender === currentState.currentGender || product.gender === 'unisex');
+            }
+            
+            if (currentState.currentCategory === 'watches' && product.category === 'watch') {
+                return product.gender === currentState.currentGender || product.gender === 'unisex';
+            }
+            
+            if (currentState.currentCategory === 'shoes' && product.category === 'shoes') {
+                return product.gender === currentState.currentGender || product.gender === 'unisex';
+            }
+            
+            if (currentState.currentCategory === 'accessories' && product.category === 'accessories') {
+                return product.gender === currentState.currentGender || product.gender === 'unisex';
+            }
+            
+            return false;
+        });
+    }
+    
+    // Filter by selected category filter
+    const categoryFilter = document.getElementById('category-filter').value;
+    if (categoryFilter !== 'all') {
+        filteredProducts = filteredProducts.filter(product => product.category === categoryFilter);
+    }
+    
+    // Filter by search query
+    if (currentState.searchQuery) {
+        filteredProducts = filteredProducts.filter(product => 
+            product.name.toLowerCase().includes(currentState.searchQuery) ||
+         
